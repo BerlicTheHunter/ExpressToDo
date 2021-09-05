@@ -1,7 +1,7 @@
 //...............Pull in required resources...............\\
 const express= require('express');
-const apiRoutes= require('./routes/apiRoutes');
-const htmlRoutes= require('./routes/htmlRoutes');
+// const apiRoutes= require('./routes/apiRoutes');
+// const htmlRoutes= require('./routes/htmlRoutes');
 
 // ..............Start Express...............\\
 const app= express();
