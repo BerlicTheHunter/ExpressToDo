@@ -3,7 +3,7 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
-
+// This Section sets event listeners when at the correct path. 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
@@ -67,10 +67,13 @@ const renderActiveNote = () => {
 };
 
 const handleNoteSave = () => {
+  const newId= Date.now();
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
+    id: newId.toString()
   };
+  console.log(newNote);
   saveNote(newNote).then(() => {
     getAndRenderNotes();
     renderActiveNote();
@@ -105,6 +108,7 @@ const handleNoteView = (e) => {
 // Sets the activeNote to and empty object and allows the user to enter a new note
 const handleNewNoteView = (e) => {
   activeNote = {};
+  console.log('new note clicked');
   renderActiveNote();
 };
 
