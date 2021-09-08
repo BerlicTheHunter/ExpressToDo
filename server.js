@@ -8,8 +8,9 @@ const app= express();
 // ..............Set Port...............\\
 const PORT= process.env.PORT || 3001;
 
-// ..............Set Up Routes...............\\
+// ..............Set Up Routes and Middleware...............\\
 app.use(express.static('public'));
+app.use(express.json());
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
