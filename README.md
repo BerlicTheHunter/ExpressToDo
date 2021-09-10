@@ -29,7 +29,7 @@ To use this locally,
 * run "npm init" 
 * run "npm install express" 
 * run "npm install fs"  
-* run "npm install uuid"
+* run "npm install uuidv4"
 
 This file project is dependent on node.js, express.js, fs.js, uuid.js and the provided files ( in the prearranged directories). 
 
